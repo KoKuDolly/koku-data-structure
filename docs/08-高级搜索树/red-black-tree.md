@@ -75,3 +75,7 @@ template <typename T> int RedBlack<T>::updateHeight( BinNodePosi(T) x ) {
   if ( IsBlack( x ) ) x->height++; return x->height; // 只计黑结点
 }
 ```
+
+## 红黑树-插入
+
+## 红黑树-删除
