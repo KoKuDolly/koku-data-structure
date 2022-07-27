@@ -51,3 +51,24 @@ linear array
 |traverse()   |遍历向量并统一处理所有元素，处理方法由函数对象指定 |向量          |
 
 ### ADT 操作
+
+### 构造与析构
+
+vector 模板类
+
+```c++
+Vector(int c = DEFAULT_CAPACITY)
+  { _elem = new T[_capacity = c]; _size = 0; } // 默认
+  
+Vector(T const * A, Rank lo, Rank hi) // 数组区间复制
+  { copyFrom(A, lo, hi); }
+  
+Vector(Vector<T> const & V, Rank lo, Rank hi)
+  { copyFrom(V._elem, lo, hi); } // 向量区间复制
+
+Vector(Vector<T> const & V)
+  { copyFrom(V._elem, 0, V._size); } // 向量整体复制
+  
+// 析构
+~Vector() { delete [] _elem; } // 释放内部空间
+```
