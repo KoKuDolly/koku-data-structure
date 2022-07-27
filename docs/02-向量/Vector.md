@@ -72,3 +72,16 @@ Vector(Vector<T> const & V)
 // 析构
 ~Vector() { delete [] _elem; } // 释放内部空间
 ```
+
+### 复制 copyFrom
+
+```c++
+template <typename T> // T为基本类型，或已重载赋值操作符'='
+void Vector<T>::copyFrom(T* const A, Rank lo, Rank hi) {
+  _elem = new T[_capacity = 2*(hi - lo)]; // 分配空间
+  _size = 0; // 规模清零
+  while (lo < hi) // A[lo, hi) 内的元素逐一
+    _elem[_size++] = A[lo++]; // 复制至_elem[0, hi-lo)
+}
+```
+
