@@ -94,6 +94,20 @@ rb-tree  B-tree
 #### 插入 删除 查找
 
 插入结点：
+
+```c++
+template <typename T> BinNodePosi(T) RedBlack<T>::insert( const T & e ) {
+  // 确认目标结点不存在（留意对_hot的设置）
+  BinNodePosi(T) & x = search( e ); if ( x ) return x;
+  // 创建红色结点x，以_hot为父，黑高度-1
+  x = new BinNode<T>( e, _hot, NULL, NULL, -1 ); _size++;
+  // 如有必要，需做双红修正
+  solveDoubleRed( x );
+  // 返回插入的结点
+  return x ? x : _hot->parent;
+} // 无论原树中是否存有e,返回时总有x->data == e
+```
+
 和二叉查找树插入操作一致，多了平衡调整操作。新结点默认是红色结点，只有插入到红色结点下时才需要调整，分下面3种情况；
 
 1. 叔叔结点是红色
