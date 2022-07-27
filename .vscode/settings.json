@@ -1,0 +1,38 @@
+{
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.enableSmartCommit": true,
+    "window.zoomLevel": 1,
+    "redhat.telemetry.enabled": true,
+    "workbench.sideBar.location": "right",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true,
+        "editor.formatOnSaveMode": "file",
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    },
+    "markdown.extension.tableFormatter.enabled": true,
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "terminal.external.windowsExec": "D:\\Program Files (x86)\\Git\\git-bash.exe"
+}
